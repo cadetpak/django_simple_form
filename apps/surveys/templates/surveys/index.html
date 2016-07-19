@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>First Survey Form</title>
+	</head>
+	<body>
+		<form action="/process_form" method="POST">
+			{% csrf_token %}
+			<label for = "name">Name:</label>
+				<input type="text" name="name"/><br>
+			
+			<label for="location">Location:</label>
+				<select name="location">
+  					<option value="sanjose">San Jose</option>
+  					<option value="seattle">Seattle</option>
+ 					<option value="chicago">Chicago</option>
+  					<option value="newyork">New York</option>
+				</select><br>
+
+			<label for="language">Favorite Language:</label>
+				<select name="language">
+  					<option value="python">Python</option>
+  					<option value="ruby">Ruby</option>
+ 					<option value="php">PHP</option>
+  					<option value="ios">IOS</option>
+				</select><br>
+
+			<label for="comment">Comment:</label>
+				<input type="text" name="comment"/>
+				<br>
+
+			<input type="submit" value="Submit"/>
+		</form>
+
+	</body>
+</html>

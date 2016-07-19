@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>First Survey Form</title>
+	</head>
+	<body>
+		<h1> You have submitted this form {{ request.session.count }} times!</h1>
+		{% for info in request.session.info.items %}
+			{{ info.0 }}: {{ info.1 }}<br>
+		{% endfor %}
+
+
+		<a href='/'>Back</a>
+
+	</body>
+</html>
